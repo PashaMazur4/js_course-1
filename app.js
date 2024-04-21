@@ -1,13 +1,21 @@
-const name = 'Peter';
-const deposit = 12000;
-const houseCost = 13500;
-const period = 24;
-const yearRate = 0.07;
+let res = prompt("How much is 7 + or - 15");
 
-let withrawed = deposit * (1 + yearRate/12) ** 24;
+switch (res) {
+  case "22":
+  case "-8":
+  case "I am not a robot":
+    console.log("Success");
+    break;
+  default:
+    console.log("You are a robot");
+}
 
-if (houseCost < withrawed) {
-    console.log(`${name} earned ${withrawed} and he can buy the house. Balance is ${withrawed - houseCost}`);
-} else {
-    console.log(`${name} earned ${withrawed} and he can't buy the house.`);
+switch (true) {
+  case Number(res) === 22:
+  case Number(res) === -8:
+  case res === "I am not a robot":
+    console.log("Success");
+    break;
+  default:
+    console.log("You are a robot");
 }
